@@ -1,0 +1,15 @@
+.container-nav {
+    display: grid;
+    grid-template-columns: auto repeat(6, 1fr); /* First column auto-sized, next 6 columns with equal width */
+    align-items: center; /* Align items vertically in the center */
+    gap: 16px; /* Adjust the gap as needed */
+    grid-auto-flow: column; /* Display items in a single row */
+}
+
+  .logo-nav {
+    grid-column: 1; /* Logo takes the first column */
+  }
+
+  .nav-item {
+    grid-column: span 1; /* Each navigation item takes one column with equal width */
+  }
