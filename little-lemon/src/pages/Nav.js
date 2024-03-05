@@ -1,21 +1,30 @@
 import React from 'react';
+import './styles.css';
 import logo from './logo.jpg';
 
 
 function Nav() {
+    const menuItems = [
+      { text: 'Home', link: '/' },
+      { text: 'About', link: '/about' },
+      { text: 'Menu', link: '/menu' },
+      { text: 'Reservations', link: '/reservations' },
+      { text: 'Order online', link: '/order-online' },
+      { text: 'Login', link: '/login' },
+    ];
+  
     return (
-        <nav>
-            <img src={logo} alt="Little Lemon logo" />
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/menu">Menu</a></li>
-                <li><a href="/reservations">Reservations</a></li>
-                <li><a href="/order-online">Order online</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
+      <nav className="container-nav">
+        <img src={logo} alt="Little Lemon logo" className="logo-nav" />
+        <ul>
+          {menuItems.map((item, index) => (
+            <li key={index} className="nav-item">
+              <a href={item.link}>{item.text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     );
-}
+  }
 
 export default Nav;
