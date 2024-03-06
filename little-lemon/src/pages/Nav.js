@@ -16,13 +16,11 @@ function Nav() {
     return (
       <nav className="container-nav">
         <img src={logo} alt="Little Lemon logo" className="logo-nav" />
-        <ul>
           {menuItems.map((item, index) => (
-            <li key={index} className="nav-item">
+            <p key={index} className="nav-item">
               <a href={item.link}>{item.text}</a>
-            </li>
+            </p>
           ))}
-        </ul>
       </nav>
     );
   }
