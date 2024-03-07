@@ -12,7 +12,7 @@ function Nav() {
       { text: 'Order online', link: '/order-online' },
       { text: 'Login', link: '/login' },
     ];
-  
+
     return (
       <nav className="container-nav">
         <img src={logo} alt="Little Lemon logo" className="logo-nav" />
